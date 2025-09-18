@@ -8,3 +8,12 @@ wheels/
 
 # Virtual environments
 .venv
+
+# IDE / Editor specific
+.vscode/
+
+# Test artifacts
+.pytest_cache/
+
+# Output files
+time_tags.csv
