@@ -201,18 +201,18 @@ if __name__ == '__main__':
     # You can adjust these parameters to match your experimental setup
     params = {
         'simulation_time_s': 1.0,       # Simulate for 100 milliseconds
-        'source_pair_rate_hz': 5e5, # Let's use a very bright 50 MHz source
-        'distance_km': 5.0,             # 10 kilometers of fiber
+        'source_pair_rate_hz': 2.5e6, # Let's use a very bright 50 MHz source
+        'distance_km': 05.0,             # 10 kilometers of fiber
         'dispersion_ps_nm_km': 17.0,     # Standard SMF-28 fiber dispersion
-        'path_loss1_db': 10.0,       # 10 dB loss (90% lost) in path 1
-        'path_loss2_db': 10.0,       # 13 dB loss (~95% lost) in path 2
+        'path_loss1_db': 12.0,       # 10 dB loss (90% lost) in path 1
+        'path_loss2_db': 12.0,       # 13 dB loss (~95% lost) in path 2
         'wavelength1_nm': 1530,          # Wavelength for detector 1
-        'qe1': 0.25,                    # 65% QE for detector 1
+        'qe1': 0.2,                    # 65% QE for detector 1
         'dcr1_hz': 600000,                 # 150 dark counts/sec for detector 1
         'jitter1_s': 200e-12,            # 40 picosecond jitter for detector 1
         'dead_time1_s': 3e-6,          # 60 nanosecond dead time for detector 1
         'wavelength2_nm': 1550,          # Wavelength for detector 2
-        'qe2': 0.25,                    # 70% QE for detector 2
+        'qe2': 0.2,                    # 70% QE for detector 2
         'dcr2_hz': 600000,                 # 200 dark counts/sec for detector 2
         'jitter2_s': 150e-12,            # 45 picosecond jitter for detector 2
         'dead_time2_s': 3e-6,          # 55 nanosecond dead time for detector 2
@@ -229,6 +229,6 @@ if __name__ == '__main__':
     plot_coincidence_histogram(
         time_tags_1,
         time_tags_2,
-        window_ns=10.0,
-        coincidence_window_ns=0.08
+        window_ns=20.0,
+        coincidence_window_ns=0.16
     )
