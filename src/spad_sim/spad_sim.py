@@ -33,6 +33,7 @@ def main():
     parser.add_argument('--no-save', action='store_true', help="Don't save the time tags to a file")
     parser.add_argument('--plot-window-ns', type=float, default=10.0, help='Plotting window in nanoseconds')
     parser.add_argument('--coincidence-window-ns', type=float, default=0.08, help='Coincidence window for histogram bins in nanoseconds')
+    parser.add_argument('--plot-file', type=str, default=None, help='Save the plot to a file instead of displaying it.')
     parser.add_argument('--no-plot', action='store_true', help="Don't show the coincidence plot")
 
 
@@ -70,7 +71,8 @@ def main():
         plot_coincidence_histogram(
             time_differences,
             window_ns=args.plot_window_ns,
-            coincidence_window_ns=args.coincidence_window_ns
+            coincidence_window_ns=args.coincidence_window_ns,
+            output_file=args.plot_file
         )
 
 if __name__ == '__main__':

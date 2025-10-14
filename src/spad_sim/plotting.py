@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plot_coincidence_histogram(time_differences_s, window_ns=5.0, coincidence_window_ns=0.1):
+def plot_coincidence_histogram(time_differences_s, window_ns=5.0, coincidence_window_ns=0.1, output_file=None):
     """
     Calculates and plots a histogram of time differences.
 
@@ -11,6 +11,7 @@ def plot_coincidence_histogram(time_differences_s, window_ns=5.0, coincidence_wi
         time_differences_s (np.ndarray): Array of time differences in seconds.
         window_ns (float): The total time to show on the histogram, from -window_ns to +window_ns.
         coincidence_window_ns (float): The desired width of each bin in nanoseconds.
+        output_file (str, optional): If provided, the plot will be saved to this file. Defaults to None.
     """
     print("\nPlotting coincidence histogram...")
 
@@ -32,4 +33,10 @@ def plot_coincidence_histogram(time_differences_s, window_ns=5.0, coincidence_wi
     plt.xlabel('Time Difference (τ = t₂ - t₁) [ns]', fontsize=12)
     plt.ylabel('Coincidence Counts', fontsize=12)
     plt.grid(True, linestyle='--', alpha=0.6)
-    plt.show()
+
+    if output_file:
+        print(f"Saving plot to {output_file}...")
+        plt.savefig(output_file)
+        plt.close()
+    else:
+        plt.show()

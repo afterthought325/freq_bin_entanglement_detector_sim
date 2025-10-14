@@ -27,12 +27,41 @@ spad-sim --help
 
 This will show all the available parameters you can use to configure the simulation.
 
-### Example
+## Example Usage
 
-To run a simulation with a 10km fiber, and save the output to `my_simulation.csv`, you can run:
+Here is an example of how to run the simulation and generate a coincidence plot.
+
+### Command
 
 ```bash
-spad-sim --distance_km 10 --output_file my_simulation.csv
+spad-sim --simulation_time_s 0.1 --distance_km 10 --plot-file coincidence_plot.png
 ```
 
-The script will print the simulation progress and save the time tags to the specified CSV file. A plot of the coincidence histogram will be displayed by default. You can disable this with the `--no-plot` flag.
+### Output
+
+```
+Starting simulation...
+Path 1 Loss: 10.0 dB -> 0.100 Transmission
+Path 2 Loss: 10.0 dB -> 0.100 Transmission
+Generated 49814 photon pairs at the source.
+Calculated Dispersion Delay: 3400.00 ps (3.40 ns)
+Applying dead time...
+Simulation finished!
+Detector 1 registered 21620 events.
+Detector 2 registered 21696 events.
+
+Saving time tags to time_tags.csv...
+Save complete.
+
+Searching for coincidences within a +/- 10.00 ns window...
+Found 108 potential coincidence events.
+
+Plotting coincidence histogram...
+Histogram Bin Width (Coincidence Window): 0.08 ns
+Calculated Number of Bins: 250
+Saving plot to coincidence_plot.png...
+```
+
+### Coincidence Plot
+
+![Coincidence Plot](coincidence_plot.png)

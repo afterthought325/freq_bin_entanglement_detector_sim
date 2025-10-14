@@ -1,0 +1,20 @@
+Starting simulation...
+Path 1 Loss: 10.0 dB -> 0.100 Transmission
+Path 2 Loss: 10.0 dB -> 0.100 Transmission
+Generated 49814 photon pairs at the source.
+Calculated Dispersion Delay: 3400.00 ps (3.40 ns)
+Applying dead time...
+Simulation finished!
+Detector 1 registered 21620 events.
+Detector 2 registered 21696 events.
+
+Saving time tags to time_tags.csv...
+Save complete.
+
+Searching for coincidences within a +/- 10.00 ns window...
+Found 108 potential coincidence events.
+
+Plotting coincidence histogram...
+Histogram Bin Width (Coincidence Window): 0.08 ns
+Calculated Number of Bins: 250
+Saving plot to coincidence_plot.png...
