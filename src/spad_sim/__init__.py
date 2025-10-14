@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from spad-sim!")
+from .spad_sim import main
