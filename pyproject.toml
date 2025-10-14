@@ -1,10 +1,14 @@
 [project]
 name = "spad-sim"
 version = "0.1.0"
-description = "Add your description here"
+description = "A simulation tool for Single-Photon Avalanche Diode (SPAD) systems."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+]
 
 [project.scripts]
 spad-sim = "spad_sim:main"
