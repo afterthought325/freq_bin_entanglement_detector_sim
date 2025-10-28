@@ -1,0 +1,15 @@
+graph TD;
+    subgraph User Interface
+        A[spad_sim.py]
+    end
+    subgraph Core Logic
+        B[core.py]
+    end
+    subgraph Data Handling
+        C[io.py]
+        D[plotting.py]
+    end
+
+    A --> B;
+    A --> C;
+    A --> D;
