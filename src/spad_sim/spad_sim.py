@@ -34,9 +34,15 @@ def main():
     parser.add_argument('--plot-window-ns', type=float, default=10.0, help='Plotting window in nanoseconds')
     parser.add_argument('--coincidence-window-ns', type=float, default=0.08, help='Coincidence window for histogram bins in nanoseconds')
     parser.add_argument('--no-plot', action='store_true', help="Don't show the coincidence plot")
+    parser.add_argument('--gui', action='store_true', help="Launch the GUI")
 
 
     args = parser.parse_args()
+
+    if args.gui:
+        from . import gui
+        gui.main()
+        return
 
     # Run the simulation
     sim_params = {
